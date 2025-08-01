@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminshirt</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', 'Noto Sans Thai', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] min-h-screen font-[Quicksand] font-[Noto_Sans_Thai] text-[#333]">
+    <div class="max-w-xl mx-auto mt-10 p-8 bg-white rounded-3xl shadow-lg border border-[#f1f5f9]">
+        <h1 class="text-3xl font-bold text-[#e75480] mb-2 text-center drop-shadow">ร้านขายของที่ระลึก 30 ปี<br>สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+        <p class="text-center text-gray-600 mb-6 font-medium">สำหรับจัดเตรียมสินค้า</p>
+        <label for="stockshirt" class="block font-semibold text-gray-800 mb-2">Stock เสื้อ</label>
+        <div class="mb-4">
+            <label for="size" class="block text-sm font-medium text-gray-700 mb-1">ขนาด</label>
+            <select name="size" id="size"
+            class="border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] w-full bg-[#fdf6fa] text-gray-800">
+            <option value="" selected class="text-gray-400 font-light">- Choose Size -</option>
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+            <option value="3xl">3XL</option>
+            </select>
+        </div>
+        <label class="block mb-1 font-medium text-gray-700">สี</label>
+        <div class="flex gap-4 mb-4">
+            <label class="inline-flex items-center">
+            <input type="radio" name="color" value="white" class="form-radio text-[#e75480] peer accent-[#e75480]">
+            <span class="ml-2 peer-checked:font-bold peer-checked:text-[#e75480] text-gray-800">ขาว</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="radio" name="color" value="black" class="form-radio text-[#e75480] peer accent-[#e75480]">
+            <span class="ml-2 peer-checked:font-bold peer-checked:text-[#e75480] text-gray-800">ดำ</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="radio" name="color" value="blue" class="form-radio text-[#e75480] peer accent-[#e75480]">
+            <span class="ml-2 peer-checked:font-bold peer-checked:text-[#e75480] text-gray-800">น้ำเงิน</span>
+            </label>
+            <label class="inline-flex items-center">
+            <input type="radio" name="color" value="gray" class="form-radio text-[#e75480] peer accent-[#e75480]">
+            <span class="ml-2 peer-checked:font-bold peer-checked:text-[#e75480] text-gray-800">เทา</span>
+            </label>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+            <label for="price" class="block mb-1 font-medium text-gray-700">ราคา</label>
+            <input type="number" name="price" id="price" value="0.00" min="0" max="9999999" step="100.00"
+                class="w-full border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] bg-[#fdf6fa] text-gray-800"
+                placeholder="กรอกจำนวนเงิน">
+            </div>
+            <div>
+            <label for="quantity" class="block mb-1 font-medium text-gray-700">จำนวนสินค้า</label>
+            <input type="number" name="quantity" id="quantity"
+                class="w-full border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] bg-[#fdf6fa] text-gray-800"
+                placeholder="จำนวน">
+            </div>
+            <div>
+            <label for="nameproduct" class="block mb-1 font-medium text-gray-700">ชื่อสินค้า</label>
+            <input type="text" name="modelname" id="modelname" placeholder="ชื่อรุ่น"
+                class="w-full border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] bg-[#fdf6fa] text-gray-800">
+            </div>
+            <div>
+            <label for="startdate" class="block mb-1 font-medium text-gray-700">วันที่ขาย (เริ่ม)</label>
+            <input type="date" name="startdate" id="startdate"
+                class="w-full border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] bg-[#fdf6fa] text-gray-800">
+            </div>
+            <div>
+            <label for="enddate" class="block mb-1 font-medium text-gray-700">วันที่ขาย (สิ้นสุด)</label>
+            <input type="date" name="enddate" id="enddate" min="2023-10-01" max="2025-07-31"
+                class="w-full border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] bg-[#fdf6fa] text-gray-800">
+            </div>
+        </div>
+        <div class="mb-6">
+            <label for="description" class="block mb-1 font-medium text-gray-700">รายละเอียด</label>
+            <textarea name="description" id="description" rows="4" placeholder="รายละเอียดสินค้า" maxlength="5000"
+            class="w-full border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] bg-[#fdf6fa] text-gray-800"></textarea>
+        </div>
+        <div class="mb-6">
+            <label for="productimage" class="block mb-1 font-medium">รูปภาพสินค้า</label>
+            <input type="file" name="productimage" id="productimage" accept="image/*"
+                class="w-full border border-[#e75480] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#e75480] bg-[#fdf6fa] text-gray-800">
+        </div>
+        <div class="flex gap-4 justify-end mb-8">
+            <input type="submit" value="บันทึก"
+            class="bg-[#e75480] text-white px-6 py-2 rounded-lg hover:bg-[#f9a8d4] cursor-pointer font-semibold shadow transition">
+            <input type="reset" value="ล้างข้อมูล"
+            class="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-400 cursor-pointer font-semibold shadow transition">
+        </div>
+        <div class="mt-8">
+            <h2 class="text-lg font-semibold mb-2 text-[#e75480]">สินค้าอื่นๆ</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 pl-2">
+                <li><a href="adminbag.html" class="text-[#e75480] hover:underline">กระเป๋า</a></li>
+                <li><a href="adminglass.html"class="text-[#e75480] hover:underline">แก้วน้ำ</a></li>
+                <li><a href="admincap.html"class="text-[#e75480] hover:underline">หมวก</a></li>
+                <li><a href="adminum.html"class="text-[#e75480] hover:underline">ร่ม</a></li>
+                <li><a href="adminbrooch.html"class="text-[#e75480] hover:underline">เข็มกลัด</a></li>
+                <li><a href="adminbook.html"class="text-[#e75480] hover:underline">สมุด</a></li>
+                <li><a href="adminpen.html"class="text-[#e75480] hover:underline">ปากกา</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
